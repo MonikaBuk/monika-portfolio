@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monika Buk Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #1f1f1f;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+            .card:hover {
+                transform: scale(1.02);
+            }
+
+            .card img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+            .card-content h2 {
+                margin: 0 0 0.5rem;
+                font-size: 1.3rem;
+            }
+
+            .card-content p {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+
+            .card-content a {
+                color: #00bcd4;
+                text-decoration: none;
+                display: inline-block;
+                margin-top: 0.5rem;
+            }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1f1f1f;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Monika Buk – Game Programming Portfolio</h1>
+        <p>Interactive Projects using Unity, C++, SFML, Unreal, and VR</p>
+    </header>
+
+    <section class="grid">
+        <div class="card">
+            <img src="path-to/emotional-support.gif" alt="Emotional Support Pet">
+            <div class="card-content">
+                <h2>Emotional Support Pet</h2>
+                <p>Unity app promoting wellness through journaling, minigames, and aquarium-based achievements.</p>
+                <a href="https://github.com/MonikaBuk/emotional-support-pet" target="_blank">GitHub</a>
+                <a href="https://youtu.be/JMRB0f6fvBk" target="_blank">Video</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="path-to/bomberman.gif" alt="Bomberman Clone">
+            <div class="card-content">
+                <h2>Bomberman Multiplayer</h2>
+                <p>SFML networking game using TCP and UDP. Includes a chat-enabled lobby and 4-player support over LAN.</p>
+                <a href="https://github.com/MonikaBuk/sfml_networking" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="path-to/save-the-bird.gif" alt="Save the Bird">
+            <div class="card-content">
+                <h2>Save the Bird</h2>
+                <p>DirectX project with tilemap-based enemy logic, BFS pathfinding, and a dialogue-driven narrative.</p>
+                <a href="https://github.com/UWEGames-GiC2/directx-game-MonikaBuk" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="path-to/vr-flood.gif" alt="VR Flood Cave">
+            <div class="card-content">
+                <h2>VR Flood Cave Simulation</h2>
+                <p>Unity VR experience visualizing climate change via water levels. Includes custom shaders and scene design.</p>
+                <a href="#">(Private)</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="path-to/second-chance.gif" alt="Second Chance Game">
+            <div class="card-content">
+                <h2>Second Chance (Unreal)</h2>
+                <p>Team-developed hack and slash. I implemented dialogue systems and menu UI in Unreal Blueprints.</p>
+                <a href="#">(Private)</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Monika Buk. All rights reserved.
+    </footer>
+</body>
+</html>
