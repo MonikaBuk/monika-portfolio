@@ -87,8 +87,10 @@
 
     <section class="grid">
         <div class="card">
-            <img src="media/emotional-support.jpg" alt="Emotional Support Pet">
-            <div class="card-content">
+            <img src="media/emotional-support.jpg"
+                 data-gif="media/emotional-support.gif"
+                 alt="Emotional Support Pet"
+                 class="hover-gif">            <div class="card-content">
                 <h2>Emotional Support Pet</h2>
                 <p>Unity app promoting wellness through journaling, minigames, and aquarium-based achievements.</p>
                 <a href="https://github.com/MonikaBuk/emotional-support-pet" target="_blank" title="GitHub">
@@ -161,5 +163,20 @@
     <footer>
         &copy; 2025 Monika Bukovics All rights reserved.
     </footer>
+    <script>
+  document.querySelectorAll('.hover-gif').forEach(img => {
+    const staticSrc = img.src;
+    const gifSrc = img.dataset.gif;
+
+    img.addEventListener('mouseenter', () => {
+      img.src = gifSrc;
+    });
+
+    img.addEventListener('mouseleave', () => {
+      img.src = staticSrc;
+    });
+  });
+    </script>
+
 </body>
 </html>
