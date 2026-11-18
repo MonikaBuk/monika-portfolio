@@ -24,6 +24,27 @@
             font-size: 2.5rem;
         }
 
+        .tagline {
+            margin: 0.75rem auto 0;
+            max-width: 720px;
+            color: #cfcfcf;
+            line-height: 1.5;
+        }
+
+        .badges {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: #9e9e9e;
+        }
+
+        .section-title {
+            margin: 2rem 2rem 0;
+            font-size: 1.4rem;
+            color: #00bcd4;
+            border-bottom: 1px solid #2c2c2c;
+            padding-bottom: 0.5rem;
+        }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -71,6 +92,11 @@
                 margin-top: 0.5rem;
             }
 
+        .tech {
+            font-size: 0.85rem;
+            color: #9e9e9e;
+        }
+
         footer {
             text-align: center;
             padding: 1rem;
@@ -81,21 +107,38 @@
 </head>
 <body>
 <header>
-    <h1>Monika Bukovics Game Programming Portfolio</h1>
-    <p>Interactive Projects using Unity, C++, SFML, Unreal, and VR</p>
-    <a href="media/Monika_Bukovics_CV.pdf" target="_blank" 
+    <h1>Monika Bukovics</h1>
+    <p class="tagline">Games programmer and IT technician building interactive projects in Unity, C++, Unreal and VR, and software tools in Python.</p>
+    <p class="badges">BSc (Hons) Games Technology, First Class &nbsp;&middot;&nbsp; IBM AI Developer Professional Certificate</p>
+    <a href="media/Monika_Bukovics_CV.pdf" target="_blank"
        style="display:inline-block; margin-top:1rem; padding:0.5rem 1rem; background-color:#00bcd4; color:#121212; border-radius:6px; text-decoration:none; font-weight:bold;">
         Download My CV
     </a>
 </header>
 
+    <h2 class="section-title">Software &amp; AI</h2>
+    <section class="grid">
+        <div class="card">
+            <img src="media/counterswap.png"
+                 alt="CounterSwap Discord bot">
+            <div class="card-content">
+                <h2>CounterSwap</h2>
+                <p>Python Discord bot that reads Overwatch scoreboard screenshots with custom image recognition, identifies the enemy team, and recommends counter-picks and swaps using live hero data.</p>
+                <p class="tech">Python &middot; discord.py &middot; Pillow &middot; REST APIs</p>
+                <a href="#" title="Private">
+                    <i class="fas fa-lock fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
+    <h2 class="section-title">Games</h2>
     <section class="grid">
         <div class="card">
             <img src="media/pet.jpg"
                  data-gif="media/pet.gif"
                  alt="Emotional Support Pet"
-                 class="hover-gif">           
+                 class="hover-gif">
                 <div class="card-content">
                 <h2>Emotional Support Pet</h2>
                 <p>Unity app promoting wellness through journaling, minigames, and aquarium-based achievements.</p>
@@ -112,7 +155,7 @@
            <img src="media/network.png"
                 data-gif="media/network.gif"
                 alt="Bomberman Clone"
-                class="hover-gif">      
+                class="hover-gif">
             <div class="card-content">
                 <h2>Bomberman Multiplayer</h2>
                 <p>SFML networking game using TCP and UDP. Includes a chat-enabled lobby and 4-player support.</p>
@@ -146,7 +189,7 @@
             <img src="media/vr.jpg"
                  data-gif="media/vr.gif"
                  alt="Climate Change Simulation"
-                 class="hover-gif">           
+                 class="hover-gif">
             <div class="card-content">
                 <h2>VR Cave Climate Change Simulation</h2>
                 <p>Unity VR experience visualizing climate change via water levels. Includes custom shaders and scene design.</p>
@@ -179,12 +222,13 @@
     </section>
 
     <footer>
-        &copy; 2025 Monika Bukovics All rights reserved.
+        &copy; 2026 Monika Bukovics All rights reserved.
     </footer>
     <script>
   document.querySelectorAll('.hover-gif').forEach(img => {
     const staticSrc = img.src;
     const gifSrc = img.dataset.gif;
+    if (!gifSrc) return;
 
     img.addEventListener('mouseenter', () => {
       img.src = gifSrc;
